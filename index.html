@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nur Aminah | CV Personal</title>
+  <meta name="description" content="CV personal Nur Aminah - siswa TKJ SMKN 2 Panyabungan, pencinta novel dan musik." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+/* =========================================================
+   Nur Aminah · CV Personal
+   Soft brown / earth tone · Journal style
+   ========================================================= */
+
+:root {
+  --cream: #fbf4e8;
+  --cream-2: #f5e9d6;
+  --beige: #eadbc4;
+  --sand: #d9c1a1;
+  --mocha: #a47c5b;
+  --mocha-2: #8a6446;
+  --brown: #5a3e2b;
+  --dark: #3b2819;
+  --paper: #fffaf1;
+
+  --shadow-sm: 0 4px 14px rgba(90, 62, 43, 0.10);
+  --shadow-md: 0 12px 30px rgba(90, 62, 43, 0.16);
+  --radius: 22px;
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Poppins", system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--brown);
+  line-height: 1.7;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(234, 219, 196, .7), transparent 45%),
+    radial-gradient(circle at 85% 40%, rgba(217, 193, 161, .35), transparent 50%),
+    linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/* paper grain tipis */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .35;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(164,124,91,.05) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(164,124,91,.04) 0 1px, transparent 1px 4px);
+}
+
+main, .footer, .nav { position: relative; z-index: 2; }
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+strong { color: var(--dark); font-weight: 600; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px clamp(18px, 5vw, 60px);
+  background: rgba(251, 244, 232, .78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(164, 124, 91, .18);
+  transition: box-shadow .3s ease, padding .3s ease;
+}
+.nav.scrolled { box-shadow: var(--shadow-sm); padding-top: 10px; padding-bottom: 10px; }
+
+.nav__logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; color: var(--dark); }
+.nav__logo span { color: var(--mocha); }
+
+.nav__links { display: flex; gap: 6px; }
+.nav__links a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 500;
+  transition: background .3s, color .3s, transform .3s;
+}
+.nav__links a:hover,
+.nav__links a.active { background: var(--beige); color: var(--dark); transform: translateY(-2px); }
+
+.nav__toggle { display: none; background: none; border: 0; cursor: pointer; width: 38px; height: 38px; flex-direction: column; justify-content: center; gap: 5px; }
+.nav__toggle span { display: block; height: 2px; width: 24px; margin: 0 auto; background: var(--brown); border-radius: 2px; transition: transform .3s, opacity .3s; }
+.nav__toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav__toggle.open span:nth-child(2) { opacity: 0; }
+.nav__toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px clamp(18px, 6vw, 80px) 90px;
+  position: relative;
+}
+.hero__inner {
+  width: 100%;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 40px;
+  align-items: center;
+}
+.eyebrow {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: var(--mocha);
+}
+.hero__title {
+  font-family: var(--font-head);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.12;
+  color: var(--dark);
+  margin: 6px 0 18px;
+}
+.sparkle { display: inline-block; animation: twinkle 2.4s ease-in-out infinite; }
+.hero__tagline {
+  font-size: clamp(1rem, 2.2vw
